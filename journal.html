@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Dylan Anderson</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <!-- Signature logo — overwrite assets/signature.png with your own
+       (transparent background, any width; it displays at 26px tall) -->
+  <a class="logo" href="index.html"><img src="assets/signature.png" alt="Dylan Anderson"></a>
+  <nav>
+    <!-- Work + Journal have hover dropdowns listing their subpages.
+         When you add a project or post, add a line to the matching
+         .dropdown block on every page. -->
+    <div class="nav-item">
+      <a class="nav-link" href="work.html">Work</a>
+      <div class="dropdown">
+      <a href="work/project-01.html">Project Title 01</a>
+      <a href="work/project-02.html">Project Title 02</a>
+      <a href="work/project-03.html">Project Title 03</a>
+      <a href="work/project-04.html">Project Title 04</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link active" href="journal.html">Journal</a>
+      <div class="dropdown">
+      <a href="journal/post-01.html">Post title goes here</a>
+      <a href="journal/post-02.html">A small project I made</a>
+      <a href="journal/post-03.html">Another piece of writing</a>
+      </div>
+    </div>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="page-title">Journal</h1>
+
+  <!-- ============================================================
+       JOURNAL INDEX — reverse-chronological; each title links to a
+       post subpage in journal/. To add a post: copy an entry here,
+       duplicate a subpage file in journal/, and add a line to the
+       Journal dropdown in the header of every page.
+       ============================================================ -->
+  <div class="entries">
+
+    <article class="entry">
+      <div class="date">Aug 2026</div>
+      <div>
+        <h2><a href="journal/post-01.html">Post title goes here</a></h2>
+        <p>A one- or two-line excerpt of the post — enough to make someone click, short enough to keep the list scannable.</p>
+        <span class="tag">Writing</span>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="date">Jun 2026</div>
+      <div>
+        <h2><a href="journal/post-02.html">A small project I made</a></h2>
+        <p>Excerpt for a small side project — a sentence on what it is and why you made it.</p>
+        <span class="tag">Small Project</span>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="date">Apr 2026</div>
+      <div>
+        <h2><a href="journal/post-03.html">Another piece of writing</a></h2>
+        <p>Text-only entries work fine — just delete the image block on the post page.</p>
+        <span class="tag">Writing</span>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Dylan Anderson</span>
+  <a href="mailto:dylanderson.m@gmail.com">dylanderson.m@gmail.com</a>
+</footer>
+
+</body>
+</html>

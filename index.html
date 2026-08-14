@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dylan Anderson</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <!-- Signature logo — overwrite assets/signature.png with your own
+       (transparent background, any width; it displays at 26px tall) -->
+  <a class="logo" href="index.html"><img src="assets/signature.png" alt="Dylan Anderson"></a>
+  <nav>
+    <!-- Work + Journal have hover dropdowns listing their subpages.
+         When you add a project or post, add a line to the matching
+         .dropdown block on every page. -->
+    <div class="nav-item">
+      <a class="nav-link" href="work.html">Work</a>
+      <div class="dropdown">
+      <a href="work/project-01.html">Project Title 01</a>
+      <a href="work/project-02.html">Project Title 02</a>
+      <a href="work/project-03.html">Project Title 03</a>
+      <a href="work/project-04.html">Project Title 04</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="journal.html">Journal</a>
+      <div class="dropdown">
+      <a href="journal/post-01.html">Post title goes here</a>
+      <a href="journal/post-02.html">A small project I made</a>
+      <a href="journal/post-03.html">Another piece of writing</a>
+      </div>
+    </div>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- ============================================================
+     HERO CAROUSEL — one full-bleed photo per project; advances every
+     4 seconds with a 0.5s crossfade (duration set on .slide in
+     css/style.css). Each slide links to that project's subpage.
+     To populate: replace each .ph block with
+       <img src="assets/project-01/hero.jpg" alt="Project Title 01"
+            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+     and update the caption text.
+     ============================================================ -->
+<div class="carousel" id="carousel">
+
+  <a class="slide active" href="work/project-01.html">
+    <div class="ph"><span>Hero photo — Project 01<br>assets/project-01/hero.jpg · 2400 × 1350</span></div>
+    <div class="slide-caption">Project Title 01 <em>Brand Identity</em></div>
+  </a>
+
+  <a class="slide" href="work/project-02.html">
+    <div class="ph"><span>Hero photo — Project 02<br>assets/project-02/hero.jpg · 2400 × 1350</span></div>
+    <div class="slide-caption">Project Title 02 <em>Art Direction</em></div>
+  </a>
+
+  <a class="slide" href="work/project-03.html">
+    <div class="ph"><span>Hero photo — Project 03<br>assets/project-03/hero.jpg · 2400 × 1350</span></div>
+    <div class="slide-caption">Project Title 03 <em>Editorial Design</em></div>
+  </a>
+
+  <a class="slide" href="work/project-04.html">
+    <div class="ph"><span>Hero photo — Project 04<br>assets/project-04/hero.jpg · 2400 × 1350</span></div>
+    <div class="slide-caption">Project Title 04 <em>Packaging</em></div>
+  </a>
+
+  <div class="counter"><span class="cur">01</span> / 04</div>
+</div>
+
+<footer>
+  <span>© 2026 Dylan Anderson</span>
+  <a href="mailto:dylanderson.m@gmail.com">dylanderson.m@gmail.com</a>
+</footer>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var cur = document.querySelector('.counter .cur');
+  var i = 0;
+  setInterval(function () {
+    slides[i].classList.remove('active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('active');
+    cur.textContent = String(i + 1).padStart(2, '0');
+  }, 4000); /* ← time each slide is shown: 4 seconds */
+})();
+</script>
+
+</body>
+</html>
